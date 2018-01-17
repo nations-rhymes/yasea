@@ -138,6 +138,7 @@ public class SrsEncoder {
         MediaFormat audioFormat = MediaFormat.createAudioFormat(ACODEC, ASAMPLERATE, ach);
         audioFormat.setInteger(MediaFormat.KEY_BIT_RATE, ABITRATE);
         audioFormat.setInteger(MediaFormat.KEY_MAX_INPUT_SIZE, 0);
+        audioFormat.setInteger(MediaFormat.KEY_AAC_PROFILE, MediaCodecInfo.CodecProfileLevel.AACObjectHE_PS);
         aencoder.configure(audioFormat, null, null, MediaCodec.CONFIGURE_FLAG_ENCODE);
         // add the audio tracker to muxer.
         audioFlvTrack = flvMuxer.addTrack(audioFormat);

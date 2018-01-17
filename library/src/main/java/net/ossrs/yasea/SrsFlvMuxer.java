@@ -758,7 +758,7 @@ public class SrsFlvMuxer {
                 // 3bits left.
 
                 // samplingFrequencyIndex; 4 bslbf
-                byte samplingFrequencyIndex = 0x04;
+                byte samplingFrequencyIndex = 0x07;
                 if (asample_rate == SrsCodecAudioSampleRate.R22050) {
                     samplingFrequencyIndex = 0x07;
                 } else if (asample_rate == SrsCodecAudioSampleRate.R11025) {
@@ -792,8 +792,8 @@ public class SrsFlvMuxer {
                 aac_specific_config_got = true;
                 aac_packet_type = 0; // 0 = AAC sequence header
 
-                writeAdtsHeader(audio_tag.array(), 4);
-                audio_tag.appendOffset(7);
+//                writeAdtsHeader(audio_tag.array(), 4);
+//                audio_tag.appendOffset(7);
             } else {
                 bb.get(audio_tag.array(), 2, bi.size);
                 audio_tag.appendOffset(bi.size + 2);
