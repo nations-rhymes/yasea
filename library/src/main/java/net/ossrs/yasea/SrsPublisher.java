@@ -160,6 +160,14 @@ public class SrsPublisher {
         mEncoder.stop();
     }
 
+    public boolean startTorch() {
+        return mCameraView.startTorch();
+    }
+
+    public void stopTorch() {
+        mCameraView.stopTorch();
+    }
+
     public void startPublish(String rtmpUrl) {
         if (mFlvMuxer != null) {
             mFlvMuxer.start(rtmpUrl);
