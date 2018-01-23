@@ -24,15 +24,29 @@ public class SrsEncoder {
     public static final String VCODEC = "video/avc";
     public static final String ACODEC = "audio/mp4a-latm";
     public static String x264Preset = "veryfast";
-    public static int vPrevWidth = 640;
-    public static int vPrevHeight = 360;
-    public static int vPortraitWidth = 360;
-    public static int vPortraitHeight = 640;
-    public static int vLandscapeWidth = 640;
-    public static int vLandscapeHeight = 360;
-    public static int vOutWidth = 360;   // Note: the stride of resolution must be set as 16x for hard encoding with some chip like MTK
-    public static int vOutHeight = 640;  // Since Y component is quadruple size as U and V component, the stride must be set as 32x
+
+
+//    public static int vPrevWidth = 640;
+//    public static int vPrevHeight = 360;
+//    public static int vPortraitWidth = 360;
+//    public static int vPortraitHeight = 640;
+//    public static int vLandscapeWidth = 640;
+//    public static int vLandscapeHeight = 360;
+//    public static int vOutWidth = 360;   // Note: the stride of resolution must be set as 16x for hard encoding with some chip like MTK
+//    public static int vOutHeight = 640;  // Since Y component is quadruple size as U and V component, the stride must be set as 32x
+//    public static int vBitrate = 1200 * 1024;  // 1200 kbps
+
+    public static int vPrevWidth = 1024;
+    public static int vPrevHeight = 576;
+    public static int vPortraitWidth = 576;
+    public static int vPortraitHeight = 1024;
+    public static int vLandscapeWidth = 1024;
+    public static int vLandscapeHeight = 576;
+    public static int vOutWidth = 576;   // Note: the stride of resolution must be set as 16x for hard encoding with some chip like MTK
+    public static int vOutHeight = 1024;  // Since Y component is quadruple size as U and V component, the stride must be set as 32x
     public static int vBitrate = 1200 * 1024;  // 1200 kbps
+
+
     public static final int VFPS = 24;
     public static final int VGOP = 48;
     public static final int ASAMPLERATE = 44100;
